@@ -7,7 +7,7 @@ import { ButtonMobile } from "@alfalab/core-components/button/mobile";
 export const ThxLayout = () => {
   const submit = () => {
     window.gtag("event", "4873_get_sub", {
-      variant_name: "4873_1",
+      variant_name: "4873_3",
     });
   };
 

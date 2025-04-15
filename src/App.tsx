@@ -39,18 +39,11 @@ export const App = () => {
   const [months, setMonths] = useState<Month[]>(
     [
       {
-        text: "12 мес.",
+        text: "1 мес.",
         isNumber: true,
         isNew: false,
-        number: 12,
-        paymentSum: countSum(amount, 12),
-      },
-      {
-        text: "6 мес.",
-        isNumber: true,
-        isNew: false,
-        number: 6,
-        paymentSum: countSum(amount, 6),
+        number: 1,
+        paymentSum: countSum(amount, 1),
       },
       {
         text: "3 мес.",
@@ -60,11 +53,18 @@ export const App = () => {
         paymentSum: countSum(amount, 3),
       },
       {
-        text: "1 мес.",
+        text: "6 мес.",
         isNumber: true,
         isNew: false,
-        number: 1,
-        paymentSum: countSum(amount, 1),
+        number: 6,
+        paymentSum: countSum(amount, 6),
+      },
+      {
+        text: "12 мес.",
+        isNumber: true,
+        isNew: false,
+        number: 12,
+        paymentSum: countSum(amount, 12),
       },
       {
         text: "Другой",
@@ -215,14 +215,12 @@ export const App = () => {
         number: 18,
         paymentSum: countSum(amount, 18),
       },
-    ]
-      .reverse()
-      .map((m) => {
-        return {
-          ...m,
-          text: `${Math.floor(amount + m.paymentSum)}`,
-        };
-      }),
+    ].map((m) => {
+      return {
+        ...m,
+        text: `${Math.floor(amount + m.paymentSum)}`,
+      };
+    }),
   );
 
   const submit = () => {
