@@ -356,6 +356,15 @@ export const App = () => {
 
         <Gap size={28} />
 
+        <Typography.Text
+          tag="p"
+          view="primary-small"
+          weight="bold"
+          style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
+        >
+          Выберите количество платежей
+        </Typography.Text>
+
         <Swiper
           style={{ marginRight: "0", width: "100%", overflowX: "hidden" }}
           spaceBetween={8}
@@ -403,15 +412,12 @@ export const App = () => {
 
       <BottomSheet
         open={isModalOpen}
+        title="Выберите количество платежей"
         onClose={() => {
           setModalOpen(false);
         }}
       >
         <div style={{ overflow: "hidden", width: "100%" }}>
-          <Typography.Text tag="p" view="primary-large" weight="bold">
-            Выберите срок
-          </Typography.Text>
-
           <Swiper
             style={{ marginLeft: "0" }}
             spaceBetween={8}
